@@ -5,7 +5,7 @@ pragma solidity >=0.7.0 <0.9.0;
 contract Ballot {
 
     //State variable that holds the start time. 
-    uint startTime = block.timestamp; 
+    uint startTime; 
    
     struct Voter {
         uint weight; 
