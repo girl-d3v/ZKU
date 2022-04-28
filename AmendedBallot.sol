@@ -75,7 +75,7 @@ contract Ballot {
           require(block.timestamp < startTime + 300, "Voting Period Over :)" );
         _;
     }
-
+    //Update function to include modifier
     function vote(uint proposal) public voteEnded(proposal) {
         Voter storage sender = voters[msg.sender];
         require(sender.weight != 0, "Has no right to vote");
